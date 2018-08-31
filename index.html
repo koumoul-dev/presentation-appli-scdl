@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Projet SCDL</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/koumoul.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="logo-wrapper">
+				<img src="img/koumoul.png"/>
+			</div>
+		</header>
+		<div class="reveal">
+			<div class="slides">
+				<section data-external="content/home.html"> </section>
+				<section>
+					<h4>Open data</h4>
+					<ul>
+						<li>La loi République Numérique rend obligatoire pour toutes les collectivités de plus de 3500 habitants (et de plus de 50 agents) l’ouverture de données en opendata pour Octobre 2018.</li>
+						<li>Un travail a été fait pour identifier les données à libérer et essayer de proposer des formats à adopter : c'est le Socle Commun des Données Locales (SCDL).</li>
+						<li>Les données concernées et les formats proposés sont consultables <a href="http://opendatalocale.net/scdl/" target="_blank">sur cette page.</a></li>
+					</ul>
+				</section>
+				<section>
+				  <h4>Diffusion de données</h4>
+				  <ul>
+						<li>La société Koumoul maintient le <a href="https://github.com/koumoul-dev/data-fair/" target="_blank">logiciel Open Source Data Fair</a> qui permet de publier des jeux de données sous la forme d'APIs Rest.</li>
+						<li>Ce logiciel permet aussi de configurer des petites applications qui consomment ces flux de données.</li>
+				    <li>Le but de ce projet est de produire 2 nouvelles applications.</li>
+				  </ul>
+				</section>
+				<section>
+				  <h4>Application Equipements</h4>
+					<small>Fournir des informations au citoyen sur les équipements de la commune.</small>
+					<br>
+					<br>
+					<ul>
+						<li>Panneau de recherche multicritères.</li>
+						<li>Recherche géolocalisée.</li>
+						<li>Restitution des résultats en mode liste (vignettes).</li>
+						<li>Restitution des résultats sur une carte.</li>
+						<li>Doit être intégrable en iframe dans le site d'une commune.</li>
+				  </ul>
+				</section>
+				<section>
+				  <h4>Application Délibérations</h4>
+					<small>Rendre plus accessible au citoyen les résultats des délibérations qui ont eu lieu au sein de la collectivité.</small>
+					<br>
+					<br>
+					<ul>
+						<li>Recherche textuelle ou par thématiques.</li>
+						<li>Restitution des résultats en mode liste (vignettes), avec le texte recherché mis en surbrillance.</li>
+						<li>Fiche de détails avec possibilité de télécharger les délibérations au format PDF</li>
+						<li>Doit être intégrable en iframe dans le site d'une commune.</li>
+				  </ul>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<a href="https://koumoul.com">koumoul.com<a>
+		</footer>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					// Zoom in and out with Alt+click
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// Split content in multiple files, see https://github.com/janschoepke/reveal_external
+					{ src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external],[data-external-replace]' ); }}
+				]
+			});
+		</script>
+	</body>
+</html>
